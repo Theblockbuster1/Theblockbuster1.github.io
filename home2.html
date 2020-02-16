@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta property="og:title" content="Theblockbuster1 - Home" />
+		<meta name="description" content="Welcome to my Website! I hope you have a nice stay! :D">
+		<meta property="og:description" content="Welcome to my Website! I hope you have a nice stay! :D" />
+		<meta property="og:url" content="http://blockone.cf/" />
+		<meta property="og:image" content="/assets/images/annoying dog epic 1 1.png" />
+		<meta name="google-site-verification" content="PTjYERzWEbyNpY3eXrjpO1Rn7Rc1OXa68OLz6dlcdRE" />
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138741894-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		
+		gtag('config', 'UA-138741894-1');
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		$.ajax({
+			type: "GET",
+			url: "https://official-joke-api.appspot.com/random_joke",
+			data: {
+			},
+			dataType: "json"
+		})
+		.done(function(obj) {
+			$('#lol').text(`${obj.setup} ${obj.punchline}`);
+		})
+		.fail(function (jqXHR, exception) {
+			var msg_err = "";
+			if (jqXHR.status === 0) {
+				msg_err = "Not connect. Verify Network.";
+			} else if (jqXHR.status == 404) {
+				msg_err = "Requested page not found. [404]";
+			} else if (jqXHR.status == 500) {
+				msg_err = "Internal Server Error [500].";
+			} else if (exception === "parsererror") {
+				msg_err = "Requested JSON parse failed.";
+			} else if (exception === "timeout") {
+				msg_err = "Time out error.";
+			} else if (exception === "abort") {
+				msg_err = "Ajax request aborted.";
+			} else {
+				msg_err = "Uncaught Error. "+ jqXHR.responseText;
+			}
+		})
+		.always(function() {
+		});
+		});
+		</script>
+		<script>
+		function newjoke(){
+		$.ajax({
+			type: "GET",
+			url: "https://official-joke-api.appspot.com/random_joke",
+			data: {
+			},
+			dataType: "json"
+		})
+		.done(function(obj) {
+			$('#lol').text(`${obj.setup} ${obj.punchline}`);
+		})
+		.fail(function (jqXHR, exception) {
+			var msg_err = "";
+			if (jqXHR.status === 0) {
+				msg_err = "Not connect. Verify Network.";
+			} else if (jqXHR.status == 404) {
+				msg_err = "Requested page not found. [404]";
+			} else if (jqXHR.status == 500) {
+				msg_err = "Internal Server Error [500].";
+			} else if (exception === "parsererror") {
+				msg_err = "Requested JSON parse failed.";
+			} else if (exception === "timeout") {
+				msg_err = "Time out error.";
+			} else if (exception === "abort") {
+				msg_err = "Ajax request aborted.";
+			} else {
+				msg_err = "Uncaught Error. "+ jqXHR.responseText;
+			}
+		})
+		.always(function() {
+		});
+		}
+		</script>
+        <script>
+            $.fn.extend({ 
+                disableSelection: function() { 
+                    this.each(function() { 
+                        if (typeof this.onselectstart != 'undefined') {
+                            this.onselectstart = function() { return false; };
+                        } else if (typeof this.style.MozUserSelect != 'undefined') {
+                            this.style.MozUserSelect = 'none';
+                        } else {
+                            this.onmousedown = function() { return false; };
+                        }
+                    }); 
+                } 
+            });
+
+            $(document).ready(function() {
+                $('#lol').disableSelection();            
+            });
+        </script>
+		<style> 
+		img[style*="border-width: 0px;"] {
+		display: none;
+		}
+		</style>
+		<style type="text/css">
+		.unselectable {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		#lol {
+			position: fixed;
+			font-family: Open Sans, sans-serif;
+			color: #fff;
+			font-size: 15px;
+			z-index: 999;
+			background-color: black;
+			height: 25px;
+			width: 100%;
+			opacity: 0.5;
+		}
+		html {
+			cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAFAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAABgAAAAMAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAABMAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAVAAAADwAAAAgAAAAGAAAAAwAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAJQAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAAC8AAAAlAAAAHAAAABUAAAAPAAAABQAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABoAAAAzAAAATAAAAEwAAABMAAAATAAAAEwAAABMAAAATAAAAEwAAABMAAAATAAAAEwAAABMAAAATAAAAEwAAABMAAAATAAAAEwAAABMAAAARQAAAD8AAAA4AAAALgAAACUAAAASAAAACQAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAFMAAABRAAAATgAAAEkAAABCAAAAOQAAACIAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAP///////////////////////////////////////////////////////////////////////////wAAAP//////////////////////AAAA/wAAAP8AAAD/AAAASgAAAEUAAAA5AAAAJwAAABAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP////////////////////////////////8AAAD//////////////////////wAAAP8AAAD/AAAA//////////////////////////////////////8AAAD/AAAA/wAAACUAAAAbAAAACQAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////wAAAP////////////////8AAAD///////////////////////////8AAAD///////////////////////////8AAAD/AAAA//////8AAAD/AAAADwAAAAwAAAADAAAAAAAAAAAAAAAAAAAA////////////////////////////AAAA//////8AAAD//////wAAAP//////////////////////AAAA/wAAAP///////////////////////////wAAAP8AAABRAAAA/wAAABwAAAADAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/////////////////////////////////wAAAP8AAAD/AAAA//////////////////////8AAAD/////////////////////////////////AAAA/wAAAEgAAAAsAAAAEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAAD//////////////////////wAAAP////////////////8AAAD///////////////////////////////////////////////////////////8AAAD/AAAANQAAABwAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQAAAP//////////////////////AAAA////////////AAAA/////////////////////////////////////////////////////////////////wAAAP8AAAAfAAAADAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAAZAAAAIAAAAP////////////////////////////////////////////////////////////////////////////////////////////////8AAAD/AAAAFQAAAAwAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAABMAAAAcAAAAJQAAAP///////////////////////////////////////////////////////////////////////////wAAAP8AAAD/AAAA/wAAAAgAAAAGAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAACQAAABAAAAAXAAAAFAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAACAAAAAYAAAADAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAAHAAAABQAAAAMAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///////////////////////////////////////////////////////////////////////////////////////////////////////////AAAP/wAAAf8AAAB/AAAAfgAAAv4AAAP/AAAD/wAAA/2AAAf9wAAP/eAAf/w////8='), auto; 
+		}
+		::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+		}
+		::-webkit-scrollbar-button {
+		width: 0px;
+		height: 0px;
+		}
+		::-webkit-scrollbar-thumb {
+		background: #000048;
+		border: 0px none #000000;
+		border-radius: 50px;
+		}
+		::-webkit-scrollbar-thumb:hover {
+		background: #0080ff;
+		}
+		::-webkit-scrollbar-thumb:active {
+		background: #000000;
+		}
+		::-webkit-scrollbar-track {
+		background: #000000;
+		border: 0px none #000000;
+		border-radius: 50px;
+		}
+		::-webkit-scrollbar-track:hover {
+		background: #000000;
+		}
+		::-webkit-scrollbar-track:active {
+		background: #000040;
+		}
+		::-webkit-scrollbar-corner {
+		background: #000000;
+		}
+		</style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Theblockbuster1 - Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/templatemo-main.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+<!--
+Vanilla Template
+https://templatemo.com/tm-526-vanilla
+-->
+<body>
+<marquee class="unselectable" id="lol" ondblclick="newjoke()"></marquee>
+</body>
+<body>
+    <div class="fixed-side-navbar">
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#home"><span>Intro</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#info"><span>About Us</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#shop"><span>Shop</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#our-story"><span>Our Story</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact-us"><span>Contact Us</span></a></li>
+        </ul>
+    </div>
+	
+    <div class="parallax-content baner-content" id="home">
+        <div style="display: flex; justify-content: center; align-items: center;" class="container">
+            <div class="first-content">
+                <h1 class="bigtitle" style="font-size: 8vw;">Theblockbuster1</h1>
+                <span><em>Epic</em> in a nutshell.</span>
+                <div class="primary-button">
+                    <a href="#info" id="frontbutton" class="waves-effect waves-light btn-large amber darken-4 btn-floating pulse" style="padding: 0px 20px; font-size: 15px; width:auto;">( ͡° ͜ʖ ͡°)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="service-content" id="info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="left-text">
+                        <h4>More about <b>Block</b></h4>
+                        <div class="line-dec"></div>
+                        <p>Likes to animate/make videos, play video games, and coding things like... THIS WEBSITE :O</p>
+                        <ul>
+                            <li>-  <a href="/youtube" target="_blank">YouTube</a></li>
+                            <li>-  <a href="/discord" target="_blank">Discord</a></li>
+                            <li>-  <a href="/games" target="_blank">Random Games!</a></li>
+                        </ul>
+                        <div class="primary-button">
+                            <a class="waves-effect waves-light btn-large amber darken-4 btn-floating pulse" style="padding: 0px 20px; width:auto;" href="#shop">Got some money to spend?</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4>Epic Gamer</h4>
+                                <div class="line-dec"></div>
+                                <img class="unselectable" src="/assets/images/epicgamer.gif" alt="EpicGamer.exe">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4>Unique &amp; Creative Ideas</h4>
+                                <div class="line-dec"></div>
+                                <p>Sed lacinia ligula est, at venenatis ex iaculis quis. Morbi sollicitudin nulla eget odio pellentesque.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div style="position: relative; top: 0; height: 286.85px; background-color: rgba(0, 0, 0, 0);" class="service-item">
+                                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/+lastest?list=UUhI0OZWGTP1t1UcteiralJg" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div style="position: relative; top: 0; height: 286.85px; background-color: rgba(0, 0, 0, 0);" class="service-item">
+                                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" class="discord" src="https://discordapp.com/widget?id=472372031128862730&theme=dark" allowtransparency="true" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="parallax-content projects-content" id="shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="owl-testimonials" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/1st-big-item.jpg" data-lightbox="image-1"><img src="img/1st-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Awesome Note Book</h4>
+                                    <span>$18.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/3rd-big-item.jpg" data-lightbox="image-1"><img src="img/3rd-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Work Hand Bag</h4>
+                                    <span>$36.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/4th-big-item.jpg" data-lightbox="image-1"><img src="img/4th-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Smart Watch</h4>
+                                    <span>$45.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/5th-big-item.jpg" data-lightbox="image-1"><img src="img/5th-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>PC Tablet Draw</h4>
+                                    <span>$63.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="img/6th-big-item.jpg" data-lightbox="image-1"><img src="img/6th-item.jpg" alt=""></a>
+                                <div class="text-content">
+                                    <h4>Healthy Milkshake</h4>
+                                    <span>$77.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tabs-content" id="our-story">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="wrapper">
+                    <section id="first-tab-group" class="tabgroup">
+                      <div id="tab1">
+                        <img src="img/1st-tab1.jpg" alt="">
+                        <p>The <b>Epic Gamer</b> lodge</p>
+                      </div>
+                      <div id="tab2">
+                        <img src="img/2nd-tab.jpg" alt="">
+                        <p>Aliquam eu ultrices risus, sed condimentum diam. Duis risus nulla, elementum vitae nisi a, ornare maximus nisl. Morbi et vehicula est. Cras at vulputate justo. Cras eu nulla metus. Ut et pretium velit. Pellentesque at neque tristique dui tempor venenatis.</p>
+                      </div>
+                      <div id="tab3">
+                        <img src="img/3rd-tab.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia ligula est, at venenatis ex iaculis quis. Morbi sollicitudin nulla eget odio pellentesque, sed cursus diam iaculis.</p>
+                      </div>
+                      <div id="tab4">
+                        <img src="img/4th-tab.jpg" alt="">
+                        <p>Duis risus nulla, elementum vitae nisi a, ornare maximus nisl. Morbi et vehicula est. Cras at vulputate justo. Cras eu nulla metus. Ut et pretium velit. Pellentesque at neque tristique.</p>
+                      </div>
+                    </section>
+                    <ul style="background-color: #fff0 !important; overflow: visible;" class="tabs clearfix" data-tabgroup="first-tab-group">
+                      <li><a href="#tab1" class="active">1899 - 1950</a></li>
+                      <li><a href="#tab2">1950 - 2001</a></li>
+                      <li><a href="#tab3">2001 - 2019</a></li>
+                      <li><a href="#tab4">2019 - Now</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="parallax-content contact-content" id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <div class="row">
+                            <form id="contact" action="" method="post">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                      <fieldset>
+                                        <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                                      </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <fieldset>
+                                        <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                                      </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <fieldset>
+                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                                      </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <fieldset>
+                                        <button type="submit" id="form-submit" class="btn">Send Message</button>
+                                      </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="map">
+                    <!-- How to change your own map point
+                           1. Go to Google Maps
+                           2. Click on your location point
+                           3. Click "Share" and choose "Embed map" tab
+                           4. Copy only URL and paste it within the src="" field below
+                    -->
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1197183.8373802372!2d-1.9415093691103689!3d6.781986417238027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb96f349e85efd%3A0xb8d1e0b88af1f0f5!2sKumasi+Central+Market!5e0!3m2!1sen!2sth!4v1532967884907" width="100%" height="390" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="primary-button">
+                        <a href="#home">Back To Top</a>
+                    </div>
+                    <ul>
+                        <li><a href="/twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="/youtube"><i class="fab fa-youtube"></i></a></li>
+						<li><a href="/discord"><i class="fab fa-discord"></i></a></li>
+                    </ul>
+                    <p>Copyright &copy; 2019 Company Name 
+            
+            		- Design: <a rel="nofollow noopener" href="https://templatemo.com"><em>TemplateMo</em></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function openCity(cityName) {
+            var i;
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";  
+            }
+            document.getElementById(cityName).style.display = "block";  
+        }
+    </script>
+
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>

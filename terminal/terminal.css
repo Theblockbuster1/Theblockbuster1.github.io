@@ -1,0 +1,31 @@
+@import url(//fonts.googleapis.com/css?family=Roboto+Mono);
+
+/**
+* Terminal container.
+*/
+#terminal {
+    font-family: 'Roboto Mono', monospace;
+    width:       100%; 
+    height:      100%;
+}
+
+#header {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/**
+* The input span where the input happens.
+* Also applied to the previous inputs made in the current session.
+*/
+#terminal .input {
+    height:         1em;
+    min-width:      1em;
+    outline-color:  transparent;
+    border:         none;
+    display:        inline-block;
+}
+
+#terminal p {
+    margin:     0;
+    padding:    0;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Pointless Lever</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138741894-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138741894-1');
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("div a:last").remove();
+});
+</script>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font: 400px 16px/1.428 Consolas;
+}
+.box {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.topBar {
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 3px solid #0000CD;
+  font-size: 1.25rem;
+  text-align: center;
+  background: rgb(0,0,107);
+  background: -moz-linear-gradient(125deg, rgba(0,0,107,1) 0%, rgba(0,212,255,1) 100%);
+  background: -webkit-linear-gradient(125deg, rgba(0,0,107,1) 0%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(125deg, rgba(0,0,107,1) 0%, rgba(0,212,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00006b",endColorstr="#00d4ff",GradientType=1);
+}
+#frame {
+  height: calc(100% - 80px);
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  border-top: 3px solid #00BFFF;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-repeat: no-repeat;
+}
+#lever {
+  border: none;
+  padding: 0;
+  background: rgba(0,0,0,0);
+  zoom: 50%;
+}
+.url {
+  bottom:0;
+  right:0;
+  position:absolute;
+  color: #00006b;
+}
+.loading {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  zoom: 50%;
+}
+.loadingcontainer {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+</style>
+<script>
+var pages=["http://yeet.us",
+"http://endless.horse/",
+"https://www.watchpaintdry.online/",
+"http://www.hardcoreprawnlawn.com/",
+"https://bongo.cat/",
+"http://www.tacospin.com/",
+"http://www.corndogoncorndog.com/",
+"http://wasteaguid.info/",
+"https://smashthewalls.com/",
+"https://ffffidget.com/",
+"https://ghost.earth/",
+"https://www.iamaturtle.org/",
+"https://www.hectorsalamanca.com/",
+"https://www.justtypestuff.com/",
+"http://betamaxmas.com/",
+"https://magicschoolbus.info/",
+"http://xn--ok-ksxc.tgies.net/",
+"http://youfellasleepwatchingadvd.com/",
+"https://telehack.com",
+"http://www.staggeringbeauty.com/",
+"https://trypap.com/",
+"https://www.omfgdogs.com/",
+"http://www.cat-bounce.com/",
+"https://greatbignothing.com/",
+"http://www.ihasabucket.com/",
+"http://www.eelslap.com/",
+"https://remoji.com/",
+"http://www.koalastothemax.com/",
+"https://www.badgerbadgerbadger.com/",
+"https://happyhappyhardcore.com/",
+"https://www.rock-paper-scissors-game.com/",
+"http://www.hmpg.net/",
+"http://www.fallingfalling.com/",
+"http://www.tryingtrying.com/",
+"https://pointerpointer.com/",
+"http://pixelsfighting.com/",
+"http://www.blankwindows.com/",
+"http://chihuahuaspin.com/",
+"http://dogs.are.the.most.moe/",
+"http://www.republiquedesmangues.fr/",
+"http://buildshruggie.com/",
+"http://yeahlemons.com/",
+"http://onemillionlols.com/",
+"https://crouton.net/",
+"http://nooooooooooooooo.com/",
+"https://i.imgur.com/UqPKZ96.jpg",
+"https://loopedforinfinity.com/"];
+var len = pages.length;
+var audio = new Audio('../assets/audio/Minecraft Click.ogg');
+function getRandomUrl()
+{
+	audio.play();
+	audio.play();
+	document.getElementById("leverimg").src = "../assets/images/leveroff.gif";
+	$(".loading").show();
+	var random_num = Math.floor(Math.random() * len);
+	frames['frame'].location.href = pages[random_num];
+	$('.url').text(`${pages[random_num]}`);
+	$('.url').attr("href", `${pages[random_num]}`);
+	$('.url').attr("target", `_blank`);
+};
+</script>
+<script>
+    function rollover()
+    {
+
+        document.getElementById("leverimg").src = '../assets/images/leveron.gif';
+
+    }
+
+    function mouseaway()
+    {
+
+        document.getElementById("leverimg").src = "../assets/images/leveroff.gif";
+
+    }
+
+</script>
+<script>
+$( document ).ready(function() {
+	$(".loading").hide();
+	$("#frame").hide();
+});
+
+function showframe() {
+	$(".loading").hide();
+	$("#frame").show();
+}
+</script>
+</head>
+<body>
+  <div class="box">
+
+    <header class='topBar'><button onclick="getRandomUrl()" id="lever"><img onmouseover="rollover(this)" onmouseout="mouseaway(this)" id="leverimg" src="../assets/images/leveroff.gif" alt="The Pointless Lever"></button><a class="url" target="" href="">Hit the lever!</a></header>
+
+    <iframe onload="showframe()" src="" name="frame" id="frame" frameborder="0" scrolling="auto" width='100%'></iframe>
+	<div class="loadingcontainer"><img class="loading" src="../assets/images/loading hand.gif" alt="Loading..."></div>
+	
+  </div>
+</body>
+</html>

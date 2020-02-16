@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("div a:last").remove();
+	});
+	</script>
+    <title>Block Terminal</title>
+    <link rel="stylesheet" href="terminal.css">
+    <style>
+      body {
+        background: black;
+        color:      #1ec503;
+        
+        width:  100%;
+        height: 100%;
+        
+        padding: 0;
+        margin:  0;
+        
+        box-sizing: border-box;        
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header">Block Terminal</h1>
+    <div id="terminal">
+      <p>Type 'help' to get started.</p>
+      <p class="hidden">
+        <span class="prompt">guest@block | <span id="timestamp"></span> | > </span>
+        <span contenteditable="true" class="input"> </span>
+      </p>
+	<script>$("p:last-of-type #timestamp").html(new Date().toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', second: '2-digit'}))</script>
+    </div>
+    <script src="terminal.js"></script>
+    <script>
+    
+    
+      var commands = {};
+      
+      commands.help = function() {
+        var output = "<div>" +
+                     "<ul>" +
+                     "<li><strong>help</strong> - Display this help.</li>" +
+                     "<li><strong>youtube [yt]</strong> - Visit Theblockbuster'1 YouTube channel</li>" +
+                     "<li><strong>autobump</strong> - View Disboard Auto Bump</li>" +
+                     "<li><strong>curseforge</strong> - View Curseforge Direct Downloader</li>" +
+                     "<li><strong>meow</strong> - uhhhh</li>" +
+                     "</ul></div>";
+        return output;
+      };
+      commands.autobump = function(args) {
+        window.open('https://greasyfork.org/en/scripts/378511-auto-bump-disboard', '_blank');
+		return "Disboard Auto Bump opened in a new tab.";
+      };
+      commands.curseforge = function(args) {
+        window.open('https://greasyfork.org/en/scripts/394179-curseforge-direct-downloader', '_blank');
+		return "Curseforge Direct Downloader opened in a new tab.";
+      };
+      commands.youtube = function(args) {
+        window.open('https://www.youtube.com/channel/UChI0OZWGTP1t1UcteiralJg', '_blank');
+		return "YouTube channel opened in a new tab.";
+      };
+      commands.yt = function(args) {
+        window.open('https://www.youtube.com/channel/UChI0OZWGTP1t1UcteiralJg', '_blank');
+		return "YouTube channel opened in a new tab.";
+      };
+      commands.meow = function(args) {
+        window.location.href = 'uhhhhmeow';
+		return "gotta go fast";
+      };
+      commands.exit = function(args) {
+        window.history.back();
+		return "cya :)";
+      };
+      Terminal.init(document.getElementById("terminal"), commands);
+    </script>
+  </body>
+</html>
