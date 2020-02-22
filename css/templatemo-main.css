@@ -347,10 +347,6 @@ section {
   border:4px solid #ff7d27;
 }
 
-.tabgroup div  {
-
-}
-
 .tabgroup p {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -494,9 +490,6 @@ footer em {
 
   .baner-content h1 {
     font-size: 64px;
-  }
-
-  .baner-content em {
   }
 
   .baner-content span {
