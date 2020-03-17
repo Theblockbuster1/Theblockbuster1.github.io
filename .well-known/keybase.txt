@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/theblockbuster1
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://bblok.tech
+  * I am theblockbuster1 (https://keybase.io/theblockbuster1) on keybase.
+  * I have a public key ASCJpEGfJ2_qfpJKAiyrmrZ4VKn4JeQr8T61c5HQKrUXEAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012089a4419f276fea7e924a022cab9ab67854a9f825e42bf13eb57391d02ab517100a",
+      "host": "keybase.io",
+      "kid": "012089a4419f276fea7e924a022cab9ab67854a9f825e42bf13eb57391d02ab517100a",
+      "uid": "9088c2763f8d4b76d7728798fa9b8c19",
+      "username": "theblockbuster1"
+    },
+    "merkle_root": {
+      "ctime": 1584465671,
+      "hash": "a87f3ca4b7ce5f0e3f4e284c137d3b2baf9c21d2504a778abd7bab866c1deeee6b39a03771ac0e459e8d3d7f50d9d981d7d4af1982605b4189bf524d84a8627e",
+      "hash_meta": "2bbab79a9ac3c98baa5c51072287bb9c3949319fce5ffa8abc78bba91f814acb",
+      "seqno": 15436828
+    },
+    "service": {
+      "entropy": "bpehGFF4li5USa2QAYSnMHm9",
+      "hostname": "bblok.tech",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.3.0"
+  },
+  "ctime": 1584465682,
+  "expire_in": 504576000,
+  "prev": "a454720e520427f215811ccc51ef111afb8332df027237454fbed620c72d7f5a",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgiaRBnydv6n6SSgIsq5q2eFSp+CXkK/E+tXOR0Cq1FxAKp3BheWxvYWTESpcCCsQgpFRyDlIEJ/IVgRzMUe8RGvuDMt8CcjdFT77WIMctf1rEIBfhS0BykvUHkeNDWrB9gYODvJKhpto0+sTJSdF6jEdfAgHCo3NpZ8RAoq9fg4bJwd/DxryQt3uD7tf7JZSNKkI3cKIo18O0iNvE9X9cxbvKWY1+RDhWXAXRLQjPJu1D1XHUfQzWFikTAqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKRJo2aoyjbOSrhPp7vzP/nAuKDxrP3s5f+ou/qHxnRpo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/theblockbuster1
+
+==================================================================
