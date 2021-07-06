@@ -48,27 +48,40 @@
       };
       commands.autobump = function(args) {
         window.open('https://greasyfork.org/en/scripts/378511-auto-bump-disboard', '_blank');
-		return "Disboard Auto Bump opened in a new tab.";
+		    return "Disboard Auto Bump opened in a new tab.";
       };
       commands.curseforge = function(args) {
         window.open('https://greasyfork.org/en/scripts/394179-curseforge-direct-downloader', '_blank');
-		return "Curseforge Direct Downloader opened in a new tab.";
+		    return "Curseforge Direct Downloader opened in a new tab.";
       };
       commands.youtube = function(args) {
         window.open('https://www.youtube.com/channel/UChI0OZWGTP1t1UcteiralJg', '_blank');
-		return "YouTube channel opened in a new tab.";
+		    return "YouTube channel opened in a new tab.";
       };
       commands.yt = function(args) {
         window.open('https://www.youtube.com/channel/UChI0OZWGTP1t1UcteiralJg', '_blank');
-		return "YouTube channel opened in a new tab.";
+		    return "YouTube channel opened in a new tab.";
       };
       commands.meow = function(args) {
         window.location.href = 'uhhhhmeow';
-		return "gotta go fast";
+		    return "gotta go fast";
       };
       commands.exit = function(args) {
         window.history.back();
-		return "cya :)";
+		    return "cya :)";
+      };
+
+      commands.bobo = function(args) {
+		    return "🍯";
+      };
+      commands['pili and simon'] = commands['pili simon'] = commands.pilisimon = function(args) {
+		    return "🐘🦥";
+      };
+      commands['simon and pili'] = commands['simon pili'] = commands.simonpili = function(args) {
+		    return "🦥🐘";
+      };
+      commands['🦥'] = commands['🐘'] = commands['🦥🐘'] = commands['🐘🦥'] = function(args) {
+		    return "pccchhhhh";
       };
       Terminal.init(document.getElementById("terminal"), commands);
     </script>

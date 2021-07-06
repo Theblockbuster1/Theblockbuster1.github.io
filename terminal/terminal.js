@@ -101,8 +101,8 @@ var Terminal = (function() {
             updateHistory(prompt.textContent);
 
             var input = prompt.textContent.split(" ");
-            if(input[0] && input[0] in self.commands) {
-                runCommand(elem, input[0], input);
+            if(input[0] && input[0].toLowerCase() in self.commands) {
+                runCommand(elem, input[0].toLowerCase(), input);
             }
 
             resetPrompt(elem, prompt);
