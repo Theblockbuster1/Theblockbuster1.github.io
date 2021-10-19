@@ -1,0 +1,81 @@
+/* by
+ * @AbubakerSaeed96
+ * abubakersaeed.netlify.com
+ * (edited)
+ * ===============================
+ */
+
+.block-reveal {
+  --t: calc(var(--td) + var(--d));
+
+  color: transparent;
+  padding: 4px;
+
+  position: relative;
+  overflow: hidden;
+	mix-blend-mode: difference;
+}
+
+.shown.block-reveal {
+  animation: revealBlock 0s var(--t) forwards;
+}
+.shown.block-reveal-over::after {
+  animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+
+.block-reveal-over {
+  --t: calc(var(--td) + var(--d));
+
+  color: transparent;
+  padding: 4px;
+
+  position: absolute;
+  overflow: hidden;
+  
+  top: 0;
+  width: 100%;
+}
+.block-reveal-over::after {
+  content: '';
+
+  width: 0%;
+  height: 100%;
+  padding-bottom: 4px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: var(--bc);
+}
+
+/* animations */
+@keyframes revealBlock {
+  100% {
+    color: white;
+  }
+}
+
+@keyframes revealingIn {
+
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes revealingOut {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
+  
