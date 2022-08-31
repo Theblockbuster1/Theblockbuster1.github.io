@@ -11,6 +11,43 @@ html {
 }
 
 #page1 .pp-tableCell {
+	background: no-repeat center white url(assets/images/dog_spin.gif);
+	background-size: 200px;
+}
+
+#page1 .pp-tableCell {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+ul.tree-view {
+	position: absolute;
+	left: 0;
+	margin: 25px !important;
+	top: 0;
+
+	opacity: 1;
+}
+
+.blink {
+	animation: blinker 10s ease-in-out infinite;
+}
+  
+@keyframes blinker {
+	40% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	60% {
+		opacity: 1;
+	}
+}
+
+
+#lastpage .pp-tableCell {
 	display: unset !important;
 }
 
@@ -96,9 +133,6 @@ html {
 #page3 {
     background-color: white;
 }
-#page4 {
-    background-color: #fdefdb;
-}
 
 #gallery > * {
 	position: relative;
@@ -183,3 +217,74 @@ html {
 	  clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
 	}
 }
+
+
+/* Draggable popup window */
+
+.draggable-window {
+	font-family: "Pixelated MS Sans Serif", Arial;
+	-webkit-font-smoothing: none;
+	font-size: 11px;
+	color: #222222;
+	position: absolute;
+}
+
+.draggable {
+	width: 300px;
+	height: 100px;
+	background: #ccc;
+	position: relative;
+}
+  
+.draggable.dragging {
+	user-select: none;
+}
+
+
+
+.tree-icon {
+	margin-right: 3px;
+}
+
+
+.sb-bevel {
+    filter: url(#bevelFilter);
+}
+
+
+.rainbow { 
+	height: 100%;
+	width: 100%;
+	left:0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1800% 1800%;
+  
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+	animation: rainbow 18s ease infinite;}
+  
+  @-webkit-keyframes rainbow {
+	  0%{background-position:0% 82%}
+	  50%{background-position:100% 19%}
+	  100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+	  0%{background-position:0% 82%}
+	  50%{background-position:100% 19%}
+	  100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+	  0%{background-position:0% 82%}
+	  50%{background-position:100% 19%}
+	  100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+	  0%{background-position:0% 82%}
+	  50%{background-position:100% 19%}
+	  100%{background-position:0% 82%}
+  }

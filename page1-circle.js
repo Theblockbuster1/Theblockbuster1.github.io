@@ -10,7 +10,7 @@
    canvas.width = window.innerWidth;
    canvas.height = window.innerHeight;
    this.canvas = canvas;
-   document.getElementById('page1').appendChild(canvas);
+   document.getElementById('lastpage').appendChild(canvas);
    this.ctx = this.canvas.getContext('2d');
    this.width = this.canvas.width;
    this.height = this.canvas.height;
@@ -267,7 +267,7 @@
    return {x: xx, y: yy};
  };
  
- document.addEventListener('DOMContentLoaded', function() {
+ var start_circle = function() {
    App.setup();
    App.draw();
    
@@ -276,7 +276,7 @@
      requestAnimationFrame(frame);
    };
    frame();
- });
+ };
  
   
  /**
