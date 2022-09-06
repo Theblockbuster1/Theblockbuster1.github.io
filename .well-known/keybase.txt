@@ -4,9 +4,9 @@ https://keybase.io/theblockbuster1
 
 I hereby claim:
 
-  * I am an admin of https://bblok.tech
+  * I am an admin of https://bblok.dev
   * I am theblockbuster1 (https://keybase.io/theblockbuster1) on keybase.
-  * I have a public key ASAEO2Mt3SMwtawwxkQNuw98GEGVA3cTALfmiadn0mg9AAo
+  * I have a public key with fingerprint A8E9 619C E6A8 AA66 72D6  BD68 E0CF 3F4C 4962 471F
 
 To do so, I am signing this object:
 
@@ -14,39 +14,58 @@ To do so, I am signing this object:
   "body": {
     "key": {
       "eldest_kid": "012089a4419f276fea7e924a022cab9ab67854a9f825e42bf13eb57391d02ab517100a",
+      "fingerprint": "a8e9619ce6a8aa6672d6bd68e0cf3f4c4962471f",
       "host": "keybase.io",
-      "kid": "0120043b632ddd2330b5ac30c6440dbb0f7c18419503771300b7e689a767d2683d000a",
+      "key_id": "e0cf3f4c4962471f",
+      "kid": "0101c1134ce3b72426d0d3d36ffceae2894eda4001c9df05543958337336c7fc4a4d0a",
       "uid": "9088c2763f8d4b76d7728798fa9b8c19",
       "username": "theblockbuster1"
     },
-    "merkle_root": {
-      "ctime": 1592586924,
-      "hash": "2a2916a3f88d66afe98e6077adbae8c01e3d552c5190cc20993adab271925e6767b790d082c6af1f5274ce027c108359f29ba97e37c454472b79b9afe4dd656c",
-      "hash_meta": "504384df603886aed57d318451725698504aca4dec22bd387970899d48ff48b8",
-      "seqno": 16718820
-    },
     "service": {
-      "entropy": "VLeIQS6qpbcb76MIisHMFs6P",
-      "hostname": "bblok.tech",
+      "hostname": "bblok.dev",
       "protocol": "https:"
     },
     "type": "web_service_binding",
-    "version": 2
+    "version": 1
   },
-  "client": {
-    "name": "keybase.io go client",
-    "version": "5.5.0"
-  },
-  "ctime": 1592586947,
-  "expire_in": 504576000,
-  "prev": "ef953c5b19ea59cb3222ddac8e1edc2ac4cba886a11c51607d32157d88df4479",
-  "seqno": 21,
+  "ctime": 1662485831,
+  "expire_in": 157680000,
+  "prev": "db47f9a041136c78be04341591241a8e446fd531d1fe8c8840da09fbbe276253",
+  "seqno": 25,
   "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgBDtjLd0jMLWsMMZEDbsPfBhBlQN3EwC35omnZ9JoPQAKp3BheWxvYWTESpcCFcQg75U8WxnqWcsyIt2sjh7cKsTLqIahHFFgfTIVfYjfRHnEIBbtXFr+UX6OXWcQxPEN09vN7uTMcSKZ214RGcUAS8aQAgHCo3NpZ8RAXMjlYZp6C5O6PDJq3HDGOo2/+e5yEFkgqr5+ar6x40ooGMG6EKVX5NJjFmLbLsiHHL/zD4K4wZQxVbs5qnDcDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJX2xJRRl3ev2Vf91rWoxbCAvbeQLLmKyHQ8tGAJepxCo3RhZ80CAqd2ZXJzaW9uAQ==
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMNuAnicbVJtTBxFAD3KRzxKC6TaE8Sgq2JBgruzsx9zWpq2FnICtqWJtKV47scs
+bI/enXt3XKFCCoLQRiKIobagEBFUSqw5RI0aG6ASaEtI9AfFIiVHRYESYoxJq0Wc
+I+0/589kZt57896bubQp3BQdNjuxI9cmZyeHXRls95kUS132CUp2qeWU9QTlwOsT
+LlWxx2t36CplpWgG0CKSIGSQBgRew5KAEYASDYAiyUiSeUHkoIQ0EXAYAlljWCxz
+AosYlQaSzDECQ9MSlU5purMYG25Dd3qJrCRixDNIwbwkShLPC0DlZZUXMa1orAYV
+iHgABUYjxBKXJ8Qg5mTJgzN0F9kjC/u6vf/B3/dNMwrDsFDBrCwACHiVVlmV5TVN
+wRIGIoJYlSBNUEjVaI6DLOJElhVYllcETYESVNd9+9blEC2KCsnPaqIKZYFXBQGI
+AhI1CcmiwqAQ0IMNp3QME7S3BMulLsUh+zxebDBUZTpFDst0BYf6DQW6B5QJzJGh
+4jLCdxsur0txlZLtEq/X7bGGaN5ydwjnx7L9noJd1p0q6ZIwyrDh0V1OysoQpOLV
+Q5IMT4oQSRImncLH3bqB7XoIwQm8SJMRuodcZ6VUGQoakmhISiKJRRnTkIUMhxgA
+GfI8EPKayrGMymhYVEQR0qpEI02WMakBcCwVyvSa00VZAUd8SsVE06MXOyWvz8BU
+5dDgkQhTWLQpKnJD6JOZos1x97/eB72xdzcNtzbb9CfNv51PqGstzBgwp9U3bZ7r
+7X2zPpDrb/pMaMr0f/JHoM5dLSwEr5nV8b9ylz/q3rrw/KF550yS/FL7384vcs5d
+HXqstWjf0i4/WNHnXj9rpPyeei11fu+jZ9JTm0/eWdtyMztz/vBM68WWFrGj8+mU
+tu2qpakZjk3EtXWfso2urep5+zt2Bra+v3HHyaWism2VAXeV5cKDyeNhK10DDzlr
+v7mk9ETevfLiv527y0pWIk4XPH46Zip4vDGl7/LYA8nfKcjvKbn5XM3uPzPeGC1N
+tOyp/ers9/uqfZ68L3sifxyNH/H9vJYz2egM504Vxa3dAasV7vreIy8kiDNztvqF
+npHuVz49UDin8WeWFj17ny2oy3Q4j44mHrX1x2//yW4EbzsMf16a1V/Yz4Nb6BBV
+NvVOeMSui3uMG31Xx4IJem8eHI+tEYq4Y41PFGxciYmKfrvmrfIGynxwvIP55Wtb
+7HvPdFkulP9a/fKH1sF32/uq2lo/3w8iowByJw9a0COOkay6aCM+2JDT1ZUTjB9I
+mgXXxdofvGxguCodVGTFJC6yqMpfMZky3T9/uKJncdlcmw9bJs7x02s3EiYCvuaP
++e6s5cs7O/IL/onNnXl48cDqU+c787npKdP1xm9ThjbM9ouvbts8aUtr2DI8V37L
+SGKZwO3xg26jRxj8D+wSuKg=
+=ewaI
+-----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
