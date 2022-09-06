@@ -1,4 +1,2 @@
-# Theblockbuster1.github.io
+# [bblok.dev](https://bblok.dev/)
 My website.
-
-https://bblok.tech/
