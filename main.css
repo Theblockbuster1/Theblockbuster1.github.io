@@ -244,6 +244,7 @@ ul.tree-view {
 
 .tree-icon {
 	margin-right: 3px;
+	image-rendering: pixelated;
 }
 
 
