@@ -51,11 +51,11 @@ setTimeout(function() {
         setTimeout(function() {
             alert('Seriously! There isn\'t a puzzle');
             setTimeout(function() {
-                alert('Okay. Fine. Since you seem so impatient, I\'ll let you through. Just don\'t tell them I sent you.');
-                let code;
-                while (code != '0x0d0g') {
-                    code = prompt('[[ERROR]] Please input *your [Hyperlink Blocked]:').toLowerCase().replace(/o/g, '0');
-                }
+                alert('Okay. Fine. Since you seem so impatient, I\'ll let you through. Just don\'t tell [Hyperlink Blocked] I sent you.');
+                // let code;
+                // while (code != '0x0d0g') {
+                //     code = prompt('[[ERROR]] Please input *your [Hyperlink Blocked]:').toLowerCase().replace(/o/g, '0');
+                // }
                 window.location.href = 'gog';
             }, 20000);
         }, 15000);
