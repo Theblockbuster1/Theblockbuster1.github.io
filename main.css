@@ -10,15 +10,24 @@ html {
 	visibility: hidden;
 }
 
-#page1 .pp-tableCell {
+div#dog-spin {
 	background: no-repeat center white url(assets/images/dog_spin.gif);
 	background-size: 200px;
+	height: 200px;
+	width: 200px;
+}
+
+div.dog-shocked {
+	background: no-repeat center white url("assets/images/annoying dog perfect shocked scaled.png") !important;
+	background-size: 75px !important;
+	background-position-y: 54% !important;
 }
 
 #page1 .pp-tableCell {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	background: white;
 }
 
 ul.tree-view {

@@ -1,0 +1,84 @@
+html, body {
+    background: black;
+    margin: 0;
+    min-height: 100%;
+    height: 100%;
+}
+#page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#container {
+	image-rendering: pixelated;
+    position: relative;
+    height: 768px;
+    width: 1536px;
+    user-select: none;
+}
+.element {
+    position: absolute;
+}
+#painting {
+    width: 192px;
+    height: 96px;
+    top: 330px;
+    left: 978px;
+}
+#shelves {
+    width: 324px;
+    height: 396px;
+    top: 204px;
+    left: 636px;
+}
+#table {
+    width: 252px;
+    height: 144px;
+    top: 468px;
+    left: 546px;
+}
+#lamp-stand {
+    width: 48px;
+    height: 84px;
+    top: 384px;
+    left: 624px;
+}
+#bulb {
+    width: 12px;
+    height: 18px;
+    top: 366px;
+    left: 642px;
+}
+#lamp-shade {
+    width: 72px;
+    height: 72px;
+    top: 360px;
+    left: 612px;
+}
+#sofa {
+    width: 390px;
+    height: 180px;
+    top: 456px;
+    left: 876px;
+}
+#dog {
+    width: 135px;
+    height: 130px;
+    top: 446px;
+    left: 942px;
+}
+.dog-centred {
+    top: 534px !important;
+    left: 733px !important;
+}
+#banner {
+    width: 1248px;
+    height: 306px;
+    top: -385px;
+    left: 199px;
+}
+
+.hidden {
+    display: none;
+}

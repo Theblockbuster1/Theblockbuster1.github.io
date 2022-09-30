@@ -71,6 +71,33 @@ $(function() {
         $(elements).hide();
         if (index === 0) $(this).addClass('disabled');
     });
+
+    var dogshakeint;
+    var dogClickCount = 0;
+    $('div#dog-spin').on('click', function() {
+        ++dogClickCount
+        clearTimeout(dogshakeint);
+        if (dogClickCount == 3) $('div#dog-spin').removeClass('shake-0').addClass('shake-1px');
+        if (dogClickCount == 9) $('div#dog-spin').removeClass('shake-1px').addClass('shake-1_1px');
+        if (dogClickCount == 13) $('div#dog-spin').removeClass('shake-1_1px').addClass('shake-1_2px');
+        if (dogClickCount == 14) $('div#dog-spin').removeClass('shake-1_2px').addClass('shake-1_3px');
+        if (dogClickCount == 16) $('div#dog-spin').removeClass('shake-1_3px').addClass('shake-1_4px');
+        if (dogClickCount == 17) $('div#dog-spin').removeClass('shake-1_4px').addClass('shake-1_5px');
+        if (dogClickCount == 18) $('div#dog-spin').removeClass('shake-1_5px').addClass('shake-1_6px');
+        if (dogClickCount == 19) $('div#dog-spin').removeClass('shake-1_6px').addClass('shake-1_7px');
+        if (dogClickCount == 20) $('div#dog-spin').removeClass('shake-1_7px').addClass('shake-1_8px');
+        if (dogClickCount == 21) $('div#dog-spin').removeClass('shake-1_8px').addClass('shake-1_9px');
+        if (dogClickCount == 22) $('div#dog-spin').removeClass('shake-1_9px').addClass('shake-2px');
+        if (dogClickCount == 25) $('div#dog-spin').removeClass('shake-2px').addClass('shake-2_5px');
+        if (dogClickCount == 29) $('div#dog-spin').removeClass('shake-2_5px').addClass('shake-3px');
+        if (dogClickCount == 31) {
+            $('div#dog-spin').removeClass('shake-3px').addClass('dog-shocked');
+            setTimeout(function() { window.location = '/dog' }, 100);
+        } else {
+            $('div#dog-spin').addClass('shake-little');
+            dogshakeint = setTimeout(function() { $('div#dog-spin').removeClass('shake-little'); }, 500);
+        }
+    });
 });
 
 $(window).on('resize', function() {

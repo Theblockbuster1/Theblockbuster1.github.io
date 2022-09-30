@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Dog</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='dog.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js" integrity="sha512-H8u5mlZT1FD7MRlnUsODppkKyk+VEiCmncej8yZW1k/wUT90OQon0F9DSf/2Qh+7L/5UHd+xTLrMszjHEZc2BA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti/dist/confetti.browser.js"></script>
+</head>
+<body>
+    <div id="board">
+        <div id="game-group">
+            <form @click="handleClick" :aria-label="`${howManyCorrect} of ${ratioSquared-1} tiles correctly placed.`" :class="{dim: dimTiles, invertNumbers: invertNumbers, showNumbers: showNumbers}">
+                <transition-group name="slide" id="innerBoard" tag="div" :style="{gridTemplateColumns: `repeat(${ratio}, 1fr)`, gridTemplateColumns: `repeat(${ratio}, 1fr)`}">
+                    <button 
+                        v-for="(tile, index) in tiles" 
+                        :key="tile.val" @keyup.prevent="handleArrow"
+                        :index="index" :ref="!tile.val && 'empty'" 
+                        :disabled="!tile.isPossibleMove && tile.val > 0"
+                        class="tile"
+                        :class="{ correct: isTileCorrect(tile.val,index), possible_move: tile.isPossibleMove }" 
+                        :aria-label="getAccessibleTilePosition(tile.val, index)"
+                        :style="{
+                            backgroundPosition: getBackgroundPosition(tile.val),
+                            backgroundSize: `calc(100% * ${ratio}) calc(100% * ${ratio})`
+                        }"
+                    >
+                        <span v-if="tile.val">{{showNumbers ? tile.val : ''}}</span>
+                    </button>
+                </transition-group>
+            </form>
+            
+            <p id="counter">
+                <span id="progress-bar" :style="{width: howManyCorrect / (ratioSquared-1) * 100 + '%'}"></span>
+                <strong>{{howManyCorrect}} / {{ratioSquared-1}}</strong>
+            </p>
+        </div>
+        <div id="clue">
+            <img style="visibility:hidden;" src="clue.png" alt="Alternating tiles">
+            <button onclick="showClue()">Clue</button>
+        </div>
+    </div>
+    <script src='dog.js'></script>
+</body>
+</html>
