@@ -45,19 +45,20 @@ function animate() {
 animate();
 
 setTimeout(function() {
-    alert('There is no puzzle.');
-    setTimeout(function() {
-        alert('There is NO puzzle.');
-        setTimeout(function() {
-            alert('Seriously! There isn\'t a puzzle');
-            setTimeout(function() {
-                alert('Okay. Fine. Since you seem so impatient, I\'ll let you through. Just don\'t tell [Hyperlink Blocked] I sent you.');
-                // let code;
-                // while (code != '0x0d0g') {
-                //     code = prompt('[[ERROR]] Please input *your [Hyperlink Blocked]:').toLowerCase().replace(/o/g, '0');
-                // }
-                window.location.href = 'gog';
-            }, 20000);
-        }, 15000);
-    }, 10000);
-}, 30000);
+    window.location.href = 'gog';
+    // alert('There is no puzzle.');
+    // setTimeout(function() {
+    //     alert('There is NO puzzle.');
+    //     setTimeout(function() {
+    //         alert('Seriously! There isn\'t a puzzle');
+    //         setTimeout(function() {
+    //             alert('Okay. Fine. Since you seem so impatient, I\'ll let you through. Just don\'t tell [Hyperlink Blocked] I sent you.');
+    //             // let code;
+    //             // while (code != '0x0d0g') {
+    //             //     code = prompt('[[ERROR]] Please input *your [Hyperlink Blocked]:').toLowerCase().replace(/o/g, '0');
+    //             // }
+    //             window.location.href = 'gog';
+    //         }, 20000);
+    //     }, 15000);
+    // }, 10000);
+}, 5000);
