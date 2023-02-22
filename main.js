@@ -149,8 +149,9 @@ var stackNumber = 0;
 document.addEventListener('mousedown', function(e) {
   var clickedDragger = false;
   var clickedButton = false;
-  for(var i = 0; e.path[i] !== document.body; i++) {
-    if (e.path[i].classList.contains('draggable-window')) {
+  var path = e.composedPath ? e.composedPath() : e.path;
+  for(var i = 0; path[i] !== document.body; i++) {
+    if (path[i].classList.contains('draggable-window')) {
         let w = $(e.target).closest('.draggable-window');
 
         highestZIndex += 1;
@@ -161,14 +162,14 @@ document.addEventListener('mousedown', function(e) {
             w.attr('data-stack-number', '');
         }
     }
-    if (e.path[i].classList.contains('dragger')) {
+    if (path[i].classList.contains('dragger')) {
       clickedDragger = true;
     }
-    else if (e.path[i].classList.contains('title-bar-button')) {
+    else if (path[i].classList.contains('title-bar-button')) {
       clickedButton = true;
     }
-    else if (clickedDragger && !clickedButton && e.path[i].classList.contains('draggable-window')) {
-      target = e.path[i];
+    else if (clickedDragger && !clickedButton && path[i].classList.contains('draggable-window')) {
+      target = path[i];
       target.classList.add('dragging');
       x = e.clientX - $(target).position().left;
       y = e.clientY - $(target).position().top;
