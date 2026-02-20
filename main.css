@@ -23,11 +23,18 @@ div.dog-shocked {
 	background-position-y: 54% !important;
 }
 
-#page1 .pp-tableCell {
+body {
+	margin: 0;
+}
+
+#page1 {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	background: white;
+	height: 100%;
+	position: absolute;
+	width: 100%;
 }
 
 ul.tree-view {
@@ -55,10 +62,6 @@ ul.tree-view {
 	}
 }
 
-
-#lastpage .pp-tableCell {
-	display: unset !important;
-}
 
 .row {
 	display: flex;
